@@ -1,0 +1,36 @@
+# Rebuilds results/ from every dataset in data/ whenever a receiver saves a new one.
+# The analysis script is taken from the public code repository amro2021/qr-transfer.
+name: Analyse QR lab datasets
+on:
+  push:
+    branches: [main]
+    paths: ['data/**.zip']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: analyse
+  cancel-in-progress: false
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: amro2021/qr-transfer
+          path: tool
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pandas numpy scipy matplotlib
+      - run: python tool/analysis/analyze_qr_lab.py data/*.zip -o results
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update analysis results"
+          git pull --rebase origin main
+          git push origin HEAD:main
