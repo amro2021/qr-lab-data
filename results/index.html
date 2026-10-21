@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QR Lab Results</title><style>
+:root{--bg:#f3f5f7;--fg:#14181d;--muted:#5d6874;--line:#d9dee4;--card:#fff;--acc:#0a62b8}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1317;--fg:#e6eaee;--muted:#95a0ab;--line:#2a323b;--card:#171c22;--acc:#4f9cf0;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 Georgia,"Times New Roman",serif}
+main{max-width:1100px;margin:0 auto;padding:20px max(16px,env(safe-area-inset-right)) 48px max(16px,env(safe-area-inset-left))}
+h1{font-size:24px;margin:0 0 4px} p{color:var(--muted);margin:0 0 16px} a{color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px}
+figure img{width:100%;height:auto;display:block} figcaption{color:#444;font-size:13px;padding:6px 4px 0}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:16px 0;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:13px} th,td{padding:6px 9px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums} ul{padding-left:20px}
+</style></head><body><main>
+<h1>QR Lab Results</h1>
+<p>3 runs, 1240 processed frames and 375 QR reads from 1 dataset file(s).
+Updated 2026-10-21 19:51 UTC.</p>
+<div class="wrap"><table><thead><tr><th>Scheme</th><th>Distance (m)</th><th>Runs</th><th>Frame loss</th><th>Module errors</th><th>Completion (s)</th><th>Goodput (B/s)</th></tr></thead><tbody><tr><td>Layered a=170</td><td class="n">0.1</td><td class="n">2</td><td class="n">38.7 %</td><td class="n">9.0e-02</td><td>–</td><td>–</td></tr><tr><td>–</td><td class="n">0.1</td><td class="n">1</td><td>–</td><td>–</td><td>–</td><td>–</td></tr></tbody></table></div>
+<div class="grid"><figure><a href="fig_frame_loss_by_stream.pdf"><img src="fig_frame_loss_by_stream.png" alt="Frame loss per stream vs distance (mean ± 95 % CI over runs)." loading="lazy"></a><figcaption>Frame loss per stream vs distance (mean ± 95 % CI over runs).</figcaption></figure><figure><a href="fig_module_error_rate.pdf"><img src="fig_module_error_rate.png" alt="Raw module error rate before QR error correction. Open markers: no errors measured." loading="lazy"></a><figcaption>Raw module error rate before QR error correction. Open markers: no errors measured.</figcaption></figure><figure><a href="fig_success_per_frame.pdf"><img src="fig_success_per_frame.png" alt="Share of processed camera frames in which each stream was read." loading="lazy"></a><figcaption>Share of processed camera frames in which each stream was read.</figcaption></figure><figure><a href="fig_progress.pdf"><img src="fig_progress.png" alt="Fraction of blocks recovered over time, one line per run." loading="lazy"></a><figcaption>Fraction of blocks recovered over time, one line per run.</figcaption></figure></div>
+<h2 style="font-size:18px;margin-top:24px">Files</h2>
+<ul><li><a href="summary_by_scheme.csv">summary_by_scheme.csv</a> · <a href="summary_by_scheme.tex">summary_by_scheme.tex</a></li>
+<li><a href="summary_by_stream.csv">summary_by_stream.csv</a></li><li><a href="METHODS.md">METHODS.md</a> (metric definitions)</li>
+<li>Figures as PDF: tap any figure.</li></ul>
+</main></body></html>

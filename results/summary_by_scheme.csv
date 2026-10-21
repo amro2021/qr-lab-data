@@ -1,0 +1,3 @@
+scheme,distance_m,runs,frame_loss_mean,frame_loss_ci95,mer_mean,mer_ci95,completion_s_mean,completion_s_ci95,goodput_Bps_mean,goodput_Bps_ci95,overhead_mean,files_done,files_seen
+Layered a=170,0.1,2,0.38655,1.776962732354031,0.08954100000000001,0.09286965041670087,,,,,,,4
+,0.1,1,,,,,,,,,,,0
