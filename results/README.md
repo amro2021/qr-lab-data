@@ -1,10 +1,12 @@
 # QR Lab Results
 
-3 runs, 1240 processed frames and 375 QR reads from 1 dataset file(s). Updated 2026-10-21 19:51 UTC.
+6 runs, 1929 processed frames and 381 QR reads from 2 dataset file(s). Updated 2026-10-23 08:27 UTC.
 
 | Scheme | Distance (m) | Runs | Frame loss | Module errors | Completion (s) | Goodput (B/s) |
 |---|---:|---:|---:|---:|---:|---:|
 | Layered a=170 | 0.1 | 2 | 38.7 % | 9.0e-02 | – | – |
+| Per-user 2 tiles | – | 2 | 0.0 % | 4.6e-01 | – | – |
+| Per-user color | – | 1 | 0.0 % | 4.1e-01 | – | – |
 | nan | 0.1 | 1 | – | – | – | – |
 
 ### Frame loss per stream vs distance (mean ± 95 % CI over runs).
