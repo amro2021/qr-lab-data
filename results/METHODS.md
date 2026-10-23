@@ -1,6 +1,6 @@
 # Measurement summary
 
-Dataset: 6 runs, 1929 processed camera frames, 381 QR codes read,
+Dataset: 7 runs, 2167 processed camera frames, 381 QR codes read,
 377 codes with raw module-error measurements,
 2 receiving device(s). Schemes: Layered a=170, Per-user 2 tiles, Per-user color.
 
